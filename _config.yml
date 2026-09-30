@@ -1,7 +1,7 @@
 title: Atharva Bhosale
 description: Mechanical engineering student at IIT Tirupati building robots with ROS2, Python and C++.
 # If you rename the repo to batharva.github.io, set baseurl to ""
-baseurl: "/portfolio_web"
+baseurl: "/portfolio2"
 url: "https://batharva.github.io"
 permalink: /blog/:title/
 future: true
