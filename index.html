@@ -1,152 +1,277 @@
 ---
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ site.title }} | Robotics Portfolio</title>
-<meta name="description" content="{{ site.description }}">
-<meta name="theme-color" content="#00695c">
-<link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
-<link rel="stylesheet" href="{{ '/site.css' | relative_url }}">
-</head>
-<body>
-<a class="skip" href="#main">Skip to main content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.title }} | Robotics Portfolio</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="theme-color" content="#00695c" />
+    <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
 
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="#top">{{ site.title }}</a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="{{ '/assets/resume/AtharvaBhosale.pdf' | relative_url }}">Resume</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main id="main">
-  <div class="hero" id="top">
-    <div class="wrap">
-      <img src="{{ '/assets/img/profile_2.jpg' | relative_url }}" alt="Portrait of Atharva Bhosale" width="150" height="150">
-      <div>
-        <p class="tag">ROBOTICS · ROS2 · PYTHON · C++</p>
-        <h1>Hi, I'm Atharva Bhosale.</h1>
-        <p>Self-driven, quick-starting programmer with a curious mind who enjoys solving complex, real-world problems.</p>
-        <a class="btn" href="#projects">See my projects</a>
-        <a class="btn alt" href="#contact">Contact me</a>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href="#top">{{ site.title }}</a>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="{{ '/assets/resume/AtharvaBhosale.pdf' | relative_url }}"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-  </div>
+    </header>
 
-  <section id="about" aria-labelledby="h-about">
-    <div class="wrap">
-      <h2 id="h-about">About</h2>
-      <p>I am a Mechanical Engineering student at IIT Tirupati. I enjoy problem-solving and coding, and I bring my full effort to everything I build. During my bachelor's I work with Python, C/C++, ROS2, RViz, Gazebo, HTML5 and CSS.</p>
-      <p>I'm looking for opportunities in robotics that offer real challenges, professional growth and interesting experiences.</p>
-      <p class="meta">Languages spoken: English, Hindi, Marathi</p>
-    </div>
-  </section>
-
-  <section id="experience" class="alt-bg" aria-labelledby="h-exp">
-    <div class="wrap">
-      <h2 id="h-exp">Experience</h2>
-      <div class="card"><div class="pad">
-        <h3>Techmaniacs, IIT Tirupati</h3>
-        <p class="role">Co-Head, Autonomous Systems (Software Team)</p>
-        <p class="meta">Jan 2025 – Present · IIT Tirupati, India</p>
-        <p>Working on an ongoing autonomous systems project.</p>
-        <ul class="chips" aria-label="Tools"><li>Python</li><li>ROS2</li><li>RViz</li><li>Gazebo</li><li>Raspberry Pi</li></ul>
-      </div></div>
-    </div>
-  </section>
-
-  <section id="projects" aria-labelledby="h-proj">
-    <div class="wrap">
-      <h2 id="h-proj">Projects</h2>
-      {% assign projects = site.projects | sort: "date" | reverse %}
-      {% if projects.size > 0 %}
-      <div class="grid">
-        {% for p in projects %}
-        <article class="card">
-          {% if p.image %}<img src="{{ p.image | relative_url }}" alt="{{ p.alt | default: p.title }}" loading="lazy">{% endif %}
-          <div class="pad">
-            <h3>{{ p.title }}</h3>
-            <p>{{ p.description }}</p>
-            {% if p.tools %}<ul class="chips" aria-label="Tools used">{% for t in p.tools %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
-            <p class="links">
-              {% if p.repo %}<a href="{{ p.repo }}">Source<span class="sr"> of {{ p.title }}</span></a>{% endif %}
-              {% if p.demo %}<a href="{{ p.demo }}">Live demo<span class="sr"> of {{ p.title }}</span></a>{% endif %}
+    <main id="main">
+      <div class="hero" id="top">
+        <div class="wrap">
+          <img
+            src="{{ '/assets/img/profile_2.jpg' | relative_url }}"
+            alt="Portrait of Atharva Bhosale"
+            width="150"
+            height="150"
+          />
+          <div>
+            <p class="tag">ROBOTICS · ROS2 · PYTHON · C++</p>
+            <h1>Hi, I'm Atharva Bhosale.</h1>
+            <p>
+              Self-driven, quick-starting programmer with a curious mind who
+              enjoys solving complex, real-world problems.
             </p>
+            <a class="btn" href="#projects">See my projects</a>
+            <a class="btn alt" href="#contact">Contact me</a>
           </div>
-        </article>
-        {% endfor %}
+        </div>
       </div>
-      {% else %}<p>No projects yet. Check back soon.</p>{% endif %}
-    </div>
-  </section>
 
-  <section id="blog" class="alt-bg" aria-labelledby="h-blog">
-    <div class="wrap">
-      <h2 id="h-blog">Blog</h2>
-      {% if site.posts.size > 0 %}
-      <div class="grid">
-        {% for post in site.posts limit: 6 %}
-        <article class="card"><div class="pad">
-          <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time></p>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 140 }}</p>
-        </div></article>
-        {% endfor %}
+      <section id="about" aria-labelledby="h-about">
+        <div class="wrap">
+          <h2 id="h-about">About</h2>
+          <p>
+            I am a Mechanical Engineering student at IIT Tirupati. I enjoy
+            problem-solving and coding, and I bring my full effort to everything
+            I build. During my bachelor's I work with Python, C/C++, ROS2, RViz,
+            Gazebo, HTML5 and CSS.
+          </p>
+          <p>
+            I'm looking for opportunities in robotics that offer real
+            challenges, professional growth and interesting experiences.
+          </p>
+          <p class="meta">Languages spoken: English, Hindi, Marathi</p>
+        </div>
+      </section>
+
+      <section id="experience" class="alt-bg" aria-labelledby="h-exp">
+        <div class="wrap">
+          <h2 id="h-exp">Experience</h2>
+          <div class="card">
+            <div class="pad">
+              <h3>Techmaniacs, IIT Tirupati</h3>
+              <p class="role">Co-Head, Autonomous Systems (Software Team)</p>
+              <p class="meta">Jan 2025 – Present · IIT Tirupati, India</p>
+              <p>Working on an ongoing autonomous systems project.</p>
+              <ul class="chips" aria-label="Tools">
+                <li>Python</li>
+                <li>ROS2</li>
+                <li>RViz</li>
+                <li>Gazebo</li>
+                <li>Raspberry Pi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="h-proj">
+        <div class="wrap">
+          <h2 id="h-proj">Projects</h2>
+          {% assign projects = site.projects | sort: "date" | reverse %} {% if
+          projects.size > 0 %}
+          <div class="grid">
+            {% for p in projects %}
+            <article class="card">
+              {% if p.image %}<img
+                src="{{ p.image | relative_url }}"
+                alt="{{ p.alt | default: p.title }}"
+                loading="lazy"
+              />{% endif %}
+              <div class="pad">
+                <h3>{{ p.title }}</h3>
+                <p>{{ p.description }}</p>
+                {% if p.tools %}
+                <ul class="chips" aria-label="Tools used">
+                  {% for t in p.tools %}
+                  <li>{{ t }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+                <p class="links">
+                  {% if p.repo %}<a href="{{ p.repo }}"
+                    >Source<span class="sr"> of {{ p.title }}</span></a
+                  >{% endif %} {% if p.demo %}<a href="{{ p.demo }}"
+                    >Live demo<span class="sr"> of {{ p.title }}</span></a
+                  >{% endif %}
+                </p>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          {% else %}
+          <p>No projects yet. Check back soon.</p>
+          {% endif %}
+        </div>
+      </section>
+
+      <section id="blog" class="alt-bg" aria-labelledby="h-blog">
+        <div class="wrap">
+          <h2 id="h-blog">Blog</h2>
+          {% if site.posts.size > 0 %}
+          <div class="grid">
+            {% for post in site.posts limit: 6 %}
+            <article class="card">
+              <div class="pad">
+                <p class="meta">
+                  <time datetime="{{ post.date | date_to_xmlschema }}"
+                    >{{ post.date | date: "%-d %B %Y" }}</time
+                  >
+                </p>
+                <h3>
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+                <p>
+                  {{ post.description | default: post.excerpt | strip_html |
+                  truncate: 140 }}
+                </p>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          {% else %}
+          <p>No posts yet. Check back soon.</p>
+          {% endif %}
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="h-skills">
+        <div class="wrap">
+          <h2 id="h-skills">Skills</h2>
+          <div class="grid">
+            <div class="card">
+              <div class="pad">
+                <h3>Languages</h3>
+                <ul class="chips">
+                  <li>Python</li>
+                  <li>C / C++</li>
+                  <li>Bash</li>
+                  <li>HTML / CSS</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="pad">
+                <h3>Frameworks</h3>
+                <ul class="chips">
+                  <li>ROS2 Humble</li>
+                  <li>Gazebo</li>
+                  <li>RViz</li>
+                  <li>Nav2 &amp; SLAM (basic)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="pad">
+                <h3>Tools</h3>
+                <ul class="chips">
+                  <li>Git</li>
+                  <li>Raspberry Pi</li>
+                  <li>SolidWorks (basic)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card">
+              <div class="pad">
+                <h3>Learning now</h3>
+                <ul class="chips">
+                  <li>Advanced ROS2</li>
+                  <li>ros2_control</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="alt-bg" aria-labelledby="h-edu">
+        <div class="wrap">
+          <h2 id="h-edu">Education</h2>
+          <div class="card">
+            <div class="pad">
+              <h3>
+                <a href="https://www.iittp.ac.in/"
+                  >Indian Institute of Technology Tirupati</a
+                >
+              </h3>
+              <p class="meta">Andhra Pradesh, India</p>
+              <p>B.Tech in Mechanical Engineering</p>
+              <p class="meta">
+                Coursework: Introduction to Programming, Engineering Dynamics
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="h-contact">
+        <div class="wrap">
+          <h2 id="h-contact">Contact</h2>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:batharva4thr4@gmail.com"
+                >batharva4thr4@gmail.com</a
+              >
+            </li>
+            <li>
+              GitHub:
+              <a href="https://github.com/batharva">github.com/batharva</a>
+            </li>
+            <li>
+              LinkedIn:
+              <a href="https://www.linkedin.com/in/iathxvab/"
+                >linkedin.com/in/iathxvab</a
+              >
+            </li>
+            <li>
+              YouTube:
+              <a href="https://www.youtube.com/@i_atharvotix"
+                >youtube.com/@i_atharvotix</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © {{ site.time | date: "%Y" }} {{ site.title }} ·
+        <a href="{{ '/admin.html' | relative_url }}">Admin</a>
       </div>
-      {% else %}<p>No posts yet. Check back soon.</p>{% endif %}
-    </div>
-  </section>
-
-  <section id="skills" aria-labelledby="h-skills">
-    <div class="wrap">
-      <h2 id="h-skills">Skills</h2>
-      <div class="grid">
-        <div class="card"><div class="pad"><h3>Languages</h3><ul class="chips"><li>Python</li><li>C / C++</li><li>Bash</li><li>HTML / CSS</li></ul></div></div>
-        <div class="card"><div class="pad"><h3>Frameworks</h3><ul class="chips"><li>ROS2 Humble</li><li>Gazebo</li><li>RViz</li><li>Nav2 &amp; SLAM (basic)</li></ul></div></div>
-        <div class="card"><div class="pad"><h3>Tools</h3><ul class="chips"><li>Git</li><li>Raspberry Pi</li><li>SolidWorks (basic)</li></ul></div></div>
-        <div class="card"><div class="pad"><h3>Learning now</h3><ul class="chips"><li>Advanced ROS2</li><li>ros2_control</li></ul></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="alt-bg" aria-labelledby="h-edu">
-    <div class="wrap">
-      <h2 id="h-edu">Education</h2>
-      <div class="card"><div class="pad">
-        <h3><a href="https://www.iittp.ac.in/">Indian Institute of Technology Tirupati</a></h3>
-        <p class="meta">Andhra Pradesh, India</p>
-        <p>B.Tech in Mechanical Engineering</p>
-        <p class="meta">Coursework: Introduction to Programming, Engineering Dynamics</p>
-      </div></div>
-    </div>
-  </section>
-
-  <section id="contact" aria-labelledby="h-contact">
-    <div class="wrap">
-      <h2 id="h-contact">Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:batharva4thr4@gmail.com">batharva4thr4@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/batharva">github.com/batharva</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/iathxvab/">linkedin.com/in/iathxvab</a></li>
-        <li>YouTube: <a href="https://www.youtube.com/@i_atharvotix">youtube.com/@i_atharvotix</a></li>
-      </ul>
-    </div>
-  </section>
-</main>
-
-<footer><div class="wrap">© {{ site.time | date: "%Y" }} {{ site.title }} · <a href="{{ '/admin.html' | relative_url }}">Admin</a></div></footer>
-</body>
+    </footer>
+  </body>
 </html>
