@@ -1,6 +1,6 @@
 ---
 title: Drone Landing Rover
-date: 2026-10-01
+date: 2026-09-28
 image: /assets/img/drone-landing-rover.png
 alt: Autonomous drone landing platform and mobile rover integration
 description: An autonomous mechatronics system designed to coordinate precision drone landings on a moving or stationary unmanned ground vehicle.
