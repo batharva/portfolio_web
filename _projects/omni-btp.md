@@ -6,5 +6,5 @@ alt: Omnidirectional robot simulation in Gazebo environment
 description: A 3D simulation and kinematic control package for an omnidirectional mobile robot featuring custom URDF modeling, differential motion planning, and Gazebo physics integration.
 tools: [ROS 2, Python, C++, Gazebo, URDF]
 repo: https://github.com/batharva/omni-bot-ros2-gazebo
-demo:
+demo: https://www.youtube.com/watch?v=h3x6rgIEqbQ&t=3s
 ---
